@@ -1,0 +1,55 @@
+{% block content %}
+<body>
+<!--<video id="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">-->
+<!--    <source src="{{ url_for('static', filename='Images/istockphoto-150487436-640_adpp_is.mp4') }}" type="video/mp4">-->
+<!--  </video>-->
+{% if products %}
+    {% for product in products %}
+<div class="colform">
+        <h2>{{ product.title.title() }}</h2>
+        <p>{{ product.mrp }}</p>
+        <img src="static/productImages/{{ product.imageName }}" alt="Product Image">
+        <hr/>
+    {% endfor %}
+{% else %}
+    <p>No Products Added Yet</p>
+{% endif %}
+    </div>
+</body>
+<style>
+body{
+background:url(https://uploads-ssl.webflow.com/60a5528bc0b91d5c9fe69ca0/61fdc5db62044cc2b17606a5_webflow-tutorial-onectus-p-800.jpeg) fixed;
+    color: #f8f9fa;
+    background-size: cover;
+   min-width: 100%;
+  min-height: 100%;
+}
+    hr{
+    height:1px;
+    margin:10px 0 5px 0;
+    background:black;
+}
+h2{
+    position: relative;
+    left: 45%;
+    }
+p{
+    position: relative;
+    left: 45%;
+    }
+    img{
+        position: relative;
+    left: 45%;
+    }
+
+    #video{
+
+  position: absolute;
+  right: 0;
+
+  min-width: 100%;
+  min-height: 400%;
+      opacity: 0.75;
+}
+</style>
+{% endblock content %}
