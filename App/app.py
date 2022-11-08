@@ -150,8 +150,8 @@ product_menu = Menu(menu_bar, tearoff=0)
 about_menu = Menu(menu_bar, tearoff=0)
 
 # cascading menu to main menu
-menu_bar.add_cascade(label="billing", menu=billing_menu)
-menu_bar.add_cascade(label="statistics", menu=stats_menu)
+menu_bar.add_cascade(label="Billing", menu=billing_menu)
+menu_bar.add_cascade(label="Statistics", menu=stats_menu)
 menu_bar.add_cascade(label="Product", menu=product_menu)
 menu_bar.add_cascade(label="About", menu=about_menu)
 
@@ -165,15 +165,15 @@ stats_menu.add_command(label="Sales", command=sales)
 stats_menu.add_command(label="Product Stats", command=bill)
 
 # adding sub menu for product menu :
-product_menu.add_command(label="add", command=load_products)
-product_menu.add_command(label="view", command=add_products)
-product_menu.add_command(label="edit/delete", command=del_products)
+product_menu.add_command(label="Add", command=load_products)
+product_menu.add_command(label="View", command=add_products)
+product_menu.add_command(label="Edit/Delete", command=del_products)
 
 # adding sub menu for about menu:
-about_menu.add_command(label="about app", command=about)
+about_menu.add_command(label="About App", command=about)
 
 # Frames
-billing_frame = Frame(root, width=600, height=500, bg="red")
+billing_frame = Frame(root, width=600, height=500, bg="white")
 
 statistics_frame = Frame(root, width=600, height=500, bg="green")
 dashboard_frame = Frame(root, width=600, height=500, bg="green")
@@ -1402,7 +1402,7 @@ def view_product_screen():
     def view_products_simple():
         global pid_view_e, pname11, barcode11, mrp11, cost11, quantity11, pid11, date_added11, sac1_e, sac2_e, sac3_e, sac4_e, sac5_e, sac6_e, sac7_e
         pid11 = str(pid_view_e.get())
-        qry_main = "select * from product where `pid` = '%s' ;" % (pid11)
+        qry_main = f"select * from product where `pid` like '{pid11}%' ;"
         fpdf = pd.read_sql(qry_main, mycon)
         if fpdf.empty:
             pid_view_e.delete(0, END)

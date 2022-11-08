@@ -1,7 +1,5 @@
-*This my project for First Year CSE*
-# **Billing and Business Management**
 
-![image](https://user-images.githubusercontent.com/101919460/177272881-aa92c71e-8272-4d7a-86f2-391f99f3a878.png)
+# **Business Management System**
 
 ## **Introduction**
 We aim to **provide intel to the business owner** for making **proper business decisions** to facilitate a **better revenue stream** along with an adequate record for the same.
@@ -92,6 +90,3 @@ pip install -r requirements.txt
 * ### Bill Generation
 ![image](https://user-images.githubusercontent.com/101919460/177002086-86b3cac6-a4f8-481d-81b5-f11ac68658f9.png)
 ***
-
-# **MEET THE TEAM**
-![image](https://user-images.githubusercontent.com/101919460/177002314-2eab632d-858a-4b76-9f7f-42a7fcbe1878.png)
