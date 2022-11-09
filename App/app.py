@@ -180,7 +180,7 @@ dashboard_frame = Frame(root, width=600, height=500, bg="green")
 sales_frame = Frame(root, width=600, height=500, bg="green")
 bill_frame = Frame(root, width=600, height=500, bg="green")
 
-load_product_frame = Frame(root, width=600, height=500, bg="red")
+load_product_frame = Frame(root, width=600, height=500, bg="white")
 add_product_frame = Frame(root, width=600, height=500, bg="yellow")
 del_product_frame = Frame(root, width=600, height=500, bg="blue")
 
@@ -944,8 +944,8 @@ def billing_app_page():
 
                 # ========== email ===================
 
-                EMAIL_ADDRESS = 'YOUR EMAIL GOES HERE'
-                EMAIL_PASSWORD = 'YOUR PASSWORD GOES HERE'
+                EMAIL_ADDRESS = 'harshverma790932611@gmail.com'
+                EMAIL_PASSWORD = 'giam ukcm hcpj xyna'
                 order_number = bill_id_new  # bill number
                 msg = EmailMessage()
                 msg['Subject'] = str(
